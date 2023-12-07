@@ -85,7 +85,7 @@ module "autoscaling" {
     AmazonSSMManagedInstanceCore        = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
   }
 
-  vpc_zone_identifier =  ["subnet-0dd96741b19ec4c20", "subnet-0882d12e9929ce102"] #module.vpc.private_subnets
+  vpc_zone_identifier =  ["subnet-0377a9b6b8da787d5", "subnet-05b5c288fbbb4cfab"] #module.vpc.private_subnets
   health_check_type   = "EC2"
   min_size            = 1
   max_size            = 5
