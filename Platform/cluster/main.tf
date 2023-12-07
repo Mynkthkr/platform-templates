@@ -117,7 +117,7 @@ module "autoscaling_sg" {
   computed_ingress_with_source_security_group_id = [
     {
       rule                     = "http-80-tcp"
-      source_security_group_id = "sg-089e1e7814e691b8e"   #module.alb_sg.security_group_id
+      source_security_group_id = "sg-0383da77192b3ca33"   #module.alb_sg.security_group_id
     }
   ]
   number_of_computed_ingress_with_source_security_group_id = 1
