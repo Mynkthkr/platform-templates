@@ -112,12 +112,12 @@ module "autoscaling_sg" {
 
   name        = local.name
   description = "Autoscaling group security group"
-  vpc_id      = "vpc-013ec814de774ca97" #module.vpc.vpc_id
+  vpc_id      = "vpc-0803d89825ac7428d" #module.vpc.vpc_id
 
   computed_ingress_with_source_security_group_id = [
     {
       rule                     = "http-80-tcp"
-      source_security_group_id = "sg-0065ec72bb70f24bf"   #module.alb_sg.security_group_id
+      source_security_group_id = "sg-089e1e7814e691b8e"   #module.alb_sg.security_group_id
     }
   ]
   number_of_computed_ingress_with_source_security_group_id = 1
