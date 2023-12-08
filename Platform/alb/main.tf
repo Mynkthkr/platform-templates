@@ -5,7 +5,7 @@ locals {
   name   = "demo"
 
   container_name = "ngnix"
-  container_port = 8080
+  container_port = 80
 
 
 }

@@ -15,12 +15,12 @@ workspace:
       target_group_arn: "arn:aws:elasticloadbalancing:us-east-1:058029412961:targetgroup/demo-ngnix/26877d305a5d6616"
       image: "nginx:latest"
       name: "testl"
-      containerPort: 8080
+      containerPort: 80
       protocol: "tcp"
 
     load_balancer:
       container_name: demo
-      container_port: 8080
+      container_port: 80
       subnet_ids: ["subnet-0377a9b6b8da787d5", "subnet-05b5c288fbbb4cfab"]
 
 
