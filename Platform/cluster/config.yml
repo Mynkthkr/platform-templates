@@ -1,0 +1,29 @@
+workspace:
+  yarra-non-baseline:
+    aws:   
+      region: "us-east-1"
+      account_id: 
+    account_name: aws-infra
+    environment_name: "qa"
+
+ 
+    autoscaling_capacity_providers:
+      name: "asgtest"
+      weight: 60
+      base: 20
+
+    # ecs_service:
+    #   name: "demo"
+
+    autoscaling:
+      instance_type: "t3.large"
+      image_id:  "ami-0e1ce54e679f83a66"
+
+      
+
+ 
+
+    
+
+
+

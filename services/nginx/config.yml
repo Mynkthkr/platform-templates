@@ -1,0 +1,28 @@
+workspace:
+  yarra-non-baseline:
+    aws:   
+      region: "us-east-1"
+      account_id: 
+    account_name: aws-infra
+    environment_name: "qa"
+
+    ecs_service:
+      name: "demo"
+
+    container_definitions:
+      conatiner_name: "demo"
+      cluster_arn: "arn:aws:ecs:us-east-1:476498784073:cluster/ecs-ec2"
+      target_group_arn: "arn:aws:elasticloadbalancing:us-east-1:476498784073:targetgroup/demo-ecs-sample/69f3b4a28e134d99"
+      image: "nginx:latest"
+      name: "testl"
+      containerPort: 8080
+      protocol: "tcp"
+
+    load_balancer:
+      container_name: demo
+      container_port: 8080
+      subnet_ids: ["subnet-0377a9b6b8da787d5", "subnet-05b5c288fbbb4cfab"]
+
+
+
+
