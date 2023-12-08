@@ -112,7 +112,7 @@ module "autoscaling_sg" {
 
   name        = local.name
   description = "Autoscaling group security group"
-  vpc_id      = "c" #module.vpc.vpc_id
+  vpc_id      = "vpc-0803d89825ac7428d" #module.vpc.vpc_id
 
   computed_ingress_with_source_security_group_id = [
     {
