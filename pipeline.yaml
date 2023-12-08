@@ -1,0 +1,32 @@
+version: 1
+
+pipelines:
+  - name: TerraformPipeline
+    materials:
+      - git: https://github.com/Mynkthkr/platform-templates.git
+        branch: main
+      - git: https://github.com/Mynkthkr/platform-config.git
+        branch: main
+
+    stages:
+      - name: Plan
+        jobs:
+          - name: TerraformPlan
+            tasks:
+              - exec: /bin/sh
+                args:
+                  - -c
+                  - |
+                    cd terraform-code
+                    terraform init
+                    terraform plan -out=tfplan
+      - name: Apply
+        jobs:
+          - name: TerraformApply
+            tasks:
+              - exec: /bin/sh
+                args:
+                  - -c
+                  - |
+                    cd terraform-code
+                    terraform apply tfplan
