@@ -12,7 +12,7 @@ workspace:
     container_definitions:
       conatiner_name: "demo"
       cluster_arn: "arn:aws:ecs:us-east-1:058029412961:cluster/ecs-ec2"
-      target_group_arn: "arn:aws:elasticloadbalancing:us-east-1:058029412961:targetgroup/demo-ngnix/26877d305a5d6616"
+      target_group_arn: "arn:aws:elasticloadbalancing:us-east-1:058029412961:targetgroup/demo-ngnix/6ef36c8061e0b38b"
       image: "nginx:latest"
       name: "testl"
       containerPort: 80
