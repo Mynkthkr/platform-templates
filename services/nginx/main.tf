@@ -21,7 +21,7 @@ module "ecs_service" {
       cpu       = 256
       memory    = 128
       essential = true
-      image     = httpd:latest 
+      image     = local.workspace.container_definitions.image 
       port_mappings = [
         {
           name          = local.workspace.container_definitions.name     #local.workspace.ecs_service.name

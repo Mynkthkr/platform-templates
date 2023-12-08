@@ -14,6 +14,7 @@ workspace:
       cluster_arn: "arn:aws:ecs:us-east-1:058029412961:cluster/ecs-ec2"
       target_group_arn: "arn:aws:elasticloadbalancing:us-east-1:058029412961:targetgroup/demo-ngnix/6ef36c8061e0b38b"
       name: "test12"
+      image: "httpd:latest"
       containerPort: 80
       protocol: "tcp"
 
